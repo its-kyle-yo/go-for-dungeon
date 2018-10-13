@@ -40,22 +40,28 @@ header[role="banner"] input:focus {
     "inventory map map"
     "inventory map map"
     "store store store";
+  grid-column-gap: 0.2em;
+  margin: 5em;
 }
 
 .dungeons {
-  display: flex;
+  display: grid;
   grid-area: dungeons;
-  text-align: center;
+  grid-template-columns: 1fr 3fr;
+  background-color: blue;
 }
 
 .inventory {
   grid-area: inventory;
+  background-color: green;
 }
 
 .map {
   grid-area: map;
+  background-color: red;
 }
 
 .store {
   grid-area: store;
+  background-color: grey;
 }
