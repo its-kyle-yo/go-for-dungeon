@@ -1,32 +1,61 @@
-.App {
+header[role="banner"] {
+  background-color: black;
+  color: white;
+  display: flex;
+  padding: 0;
+  top: 0;
+  position: sticky;
+  z-index: 9999999;
+}
+
+header[role="banner"] input,
+header[role="banner"] button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 2rem;
+}
+
+header[role="banner"] input {
+  width: 100%;
+}
+
+header[role="banner"] input:focus {
+  outline: none;
+}
+
+.app {
+  display: flex;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas:
+    "dungeons dungeons dungeons"
+    "inventory map map"
+    "inventory map map"
+    "store store store";
+}
+
+.dungeons {
+  display: flex;
+  grid-area: dungeons;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.inventory {
+  grid-area: inventory;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.map {
+  grid-area: map;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.store {
+  grid-area: store;
 }
